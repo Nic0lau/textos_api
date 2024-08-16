@@ -89,7 +89,7 @@ def parse_req(buf):
 	if tokens[0] == "POST":
 		body = buf[2].partition("\r\n\r\n")[2]
 		body = unquote(body)
-		body_tokens = body.replace('&', '#').replace('?', '#').replace('=', '#').replace('+', ' ').split('#')
+		body_tokens = body.replace('&', '#').replace('=', '#').replace('+', ' ').split('#')
 
 		if tokens[1] == "reg":
 			if len(body_tokens) != 4:
